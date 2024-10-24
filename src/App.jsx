@@ -6,12 +6,18 @@ const GlobalStyle = createGlobalStyle`
 *{
 margin:0;
 padding: 0;
-boxing-siz: border-box;
+boxing-sizing: border-box;
 }
 
 body {
-background: rgb(2,0,36);
-background: linear-gradient(165deg, rgba(2,0,36,1) 0%, rgba(3,3,23,1) 41%, rgba(102,0,255,1) 100%);
+width:100vw;
+height:100vh;
+background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 58%, rgba(221,221,230,1) 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
 
