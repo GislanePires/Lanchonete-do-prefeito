@@ -10,8 +10,6 @@ boxing-sizing: border-box;
 }
 
 body {
-width:100vw;
-height:100vh;
 background: rgb(255,255,255);
 background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 58%, rgba(221,221,230,1) 100%);
 display: flex;

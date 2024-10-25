@@ -53,25 +53,54 @@ const Image = styled.img`
   }
 `;
 const ContainerCards = styled.section`
+
 display:flex;
-flex-direction:column;
 align-items:center;
 justify-content: space-around;
 padding: 2rem;
 border:solid 2px pink;
 height:100vh;
-width: 80vw;
+width: 50vw;
 flex-wrap:wrap;
+gap:2rem;
 
 `;
 const ContainerCardsImg = styled.div`
-border:solid 2px red;
-height:60vh
+background-color: rgb(196,196,196, 0.38);
+border-radius: 1rem;
+padding: 2rem;
+width: 10rem;;
+height:80vh
+display: flex;
+flex-direction: column;
+// justify-contente: space-around;
+align-items: start-end;
 
 `;
 const ImageCard = styled.img`
-    width: 15rem;
+    width: 10rem;
     height: 10rem;
+`;
+const ContainerTitulo = styled.article`
+  display:flex;
+  align-items:start;
+  background-color: pink;
+  width:78%;
+  font-size:1.2rem;
+`;
+const PrecoCard = styled.p`
+  color: #9B8C00;
+`;
+const AddProduto = styled.div`
+  background-color: #359014;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: #fff;
+  border-radius: 100rem;
+
 `;
 export default function Main() {
   const [info, setInfo] = useState([
@@ -110,22 +139,22 @@ export default function Main() {
     {
         nome: "Batata do Prefeito",
         preco: "R$ 20,00",
-        imagem: "https://www.assai.com.br/sites/default/files/tipos_de_batata_frita_-_assai_atacadista.jpg"
+        imagem: "./burger-gourmet.svg"
     },
     {
         nome: "Coxinha",
         preco: "R$ 45,00",
-        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPB7t92LL6BKeGSDWtnUYsyHeuSMpJLlvGg&s",
+        imagem: "./pizza-card.svg",
       },
       {
         nome: "Coca-cola",
         preco: "R$ 18,90",
-        imagem: "https://s2.glbimg.com/GUda5oj9xkd_yQNyn36mDn9XJmo=/620x455/e.glbimg.com/og/ed/f/original/2018/08/17/beber-refrigerante-todos-os-dias-esta-te-matando.jpg",
+        imagem: "./dessert-card.svg",
       },
       {
         nome: "X-Prefeito",
         preco: "R$ 69,90",
-        imagem: "./burger.svg"
+        imagem: "./juice-card.svg"
         }
   ]);
 
@@ -152,13 +181,15 @@ export default function Main() {
         </Slider>
       </ContainerImg>
     <ContainerCards>
-        <h2>Populares</h2>
+        <ContainerTitulo>
+          <h2>Populares</h2>
+        </ContainerTitulo>
     {card.map((item) => (
             <ContainerCardsImg>
               <ImageCard src={item.imagem} alt={item.nome} />
-              <h3>{item.nome}</h3>
-              <p>{item.preco}</p>
-              <div>+</div>
+              <p>{item.nome}</p>
+              <PrecoCard>{item.preco}</PrecoCard>
+              <AddProduto>+</AddProduto>
             </ContainerCardsImg>
           ))}
     </ContainerCards>
