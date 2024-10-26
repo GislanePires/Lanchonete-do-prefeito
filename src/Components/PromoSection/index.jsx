@@ -54,12 +54,18 @@ const SectionPromo = styled.section`
       .aument-transi:hover::before {
       opacity: 5;
       }
-
+    @media(max-width:600px){
+        flex-direction:row;
+        width: 70%; 
+        
+    }
         @media(max-width:420px){
         width: 70%;
         height: 100%;
         flex-direction:column;
         }
+
+
         @media(max-width:360px){
             width:60vw;
             flex-direction:column;
@@ -72,6 +78,14 @@ const SectionPromo = styled.section`
         bottom: 5rem;
         left: 4rem;
         height: 12rem;
+
+        @media(max-width:600px){
+        width: 18rem;
+        height: 8rem;
+        bottom:4rem;
+        left: -1rem;
+        
+    }
 
         @media(max-width:420px){
         width: 90%;
@@ -94,6 +108,11 @@ const SectionPromo = styled.section`
         justify-content: space-around;
         font-size: 1.2rem;
         color: #fff;
+
+        @media(max-width:600px){
+        text-align:center;
+        
+    }
 
         @media(max-width:420px){
         width: 100%;
