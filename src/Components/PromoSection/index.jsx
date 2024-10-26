@@ -8,6 +8,11 @@ const SectionPromo = styled.section`
     width: 90vw;
     height:50vh;
     margin: 5rem;
+
+    @media(max-width:420px){
+        width: 100%;
+        height: 70vh;
+        }
     `;
     const TitlePromo = styled.h2`
         align-self: flex-start;
@@ -15,6 +20,13 @@ const SectionPromo = styled.section`
         color: #212121;
         font-size: 2.5rem;
         font-weight: 500;
+
+        @media(max-width:420px){
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+        }
 
         @media(max-width:360px){
         font-size: 1.5rem;
@@ -43,6 +55,11 @@ const SectionPromo = styled.section`
       opacity: 5;
       }
 
+        @media(max-width:420px){
+        width: 70%;
+        height: 100%;
+        flex-direction:column;
+        }
         @media(max-width:360px){
             width:60vw;
             flex-direction:column;
@@ -56,11 +73,18 @@ const SectionPromo = styled.section`
         left: 4rem;
         height: 12rem;
 
+        @media(max-width:420px){
+        width: 90%;
+        height: 70%;
+        left: 1.5rem;
+        }
+
         @media(max-width:360px){
             width: 90%;
             height: 70%;
             left:1rem;
             bottom:5rem;
+    }
    }
     `;
     const ContainerText = styled.article`
@@ -70,6 +94,14 @@ const SectionPromo = styled.section`
         justify-content: space-around;
         font-size: 1.2rem;
         color: #fff;
+
+        @media(max-width:420px){
+        width: 100%;
+        height: 100%;
+        position:relative;
+        bottom:2rem;
+        text-align:center;
+        }
 
         @media(max-width:360px){
         font-size: 0.8rem;

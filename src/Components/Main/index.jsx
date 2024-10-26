@@ -21,6 +21,11 @@ const Principal = styled.main`
   align-items:center;
   padding: 20px 0 90px 0;
 
+  @media(max-width:420px){
+    padding-bottom: 20rem;
+        
+    }  
+
   @media(max-width:360px){
     padding-bottom: 85rem;
         
@@ -82,6 +87,11 @@ width: 68vw;
 flex-wrap:wrap;
 gap:2rem;
 
+  @media(max-width:420px){
+    width: 90vw;
+        
+    }
+
 `;
 const ContainerCardsImg = styled.div`
   background-color: rgb(196,196,196, 0.38);
@@ -102,11 +112,22 @@ const ContainerCardsImg = styled.div`
       .aument-transi:hover::before {
       opacity: 5;
       }
+    @media(max-width:420px){
+      width: 6rem;
+      height: 24vh;
+        
+    }
 
 `;
 const ImageCard = styled.img`
   width: 10rem;
   height: 10rem;
+
+  @media(max-width:420px){
+  width: 6rem;
+  height:6rem;
+        
+    }
 `;
 const ContainerTitulo = styled.article`
   display:flex;
@@ -114,16 +135,30 @@ const ContainerTitulo = styled.article`
   width:78%;
   font-size:1.2rem;
   color: #212121;
+
+  @media(max-width:420px){
+    width: 100%;
+    height: 14%;
+    font-size: 2rem;
+    align-items: center;
+    justify-content:center;
+        
+  }
 `;
 const TitlePopulares = styled.h2`
   color: #212121;
   font-size: 2.5rem;
   font-weight: 500;
   align-self: flex-start;
-  // margin-rigth: 15rem;
 
   @media(max-width:360px){
     font-size: 1.5rem;
+    }
+`;
+const NomeCard = styled.p`
+    @media(max-width:420px){
+    font-size: 0.9rem;
+        
     }
 `;
 const PrecoCard = styled.p`
@@ -239,7 +274,7 @@ export default function Main() {
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 410,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -272,7 +307,7 @@ export default function Main() {
     {card.map((item) => (
             <ContainerCardsImg>
               <ImageCard src={item.imagem} alt={item.nome} />
-              <p>{item.nome}</p>
+              <NomeCard>{item.nome}</NomeCard>
               <PrecoAdd>
               <PrecoCard>{item.preco}</PrecoCard>
               <AddProduto>+</AddProduto>
