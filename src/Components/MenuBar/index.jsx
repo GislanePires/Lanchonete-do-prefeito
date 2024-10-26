@@ -32,8 +32,8 @@ const MenuImg = styled.img`
         
     }
     @media(max-width:420px){
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
         
     }
 
